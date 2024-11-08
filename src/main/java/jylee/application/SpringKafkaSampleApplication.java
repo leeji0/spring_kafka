@@ -1,6 +1,6 @@
-package spring.application;
+package jylee.application;
 
-import spring.kafka.KafkaProducer;
+import jylee.kafka.KafkaProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,20 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
-@ComponentScan("spring")
-public class KafkaSampleApplication {
+@ComponentScan("jylee")
+public class SpringKafkaSampleApplication {
     @Autowired
     KafkaProducer kafkaProducer;
 
     @RequestMapping(method = RequestMethod.GET, path = "/send")
     String send() {
-        kafkaProducer.sendMessage("medium-jjeaby-topic", "message key medium", "medium -> jjeaby message");
-        kafkaProducer.sendMessage("company-jjeaby-topic", "message key company", "company -> jjeaby message");
+        kafkaProducer.sendMessage("medium-jylee-topic", "message key medium", "medium -> jylee message");
+        kafkaProducer.sendMessage("company-jylee-topic", "message key company", "company -> jylee message");
         return "Kafka Produce!!!";
     }
 
     public static void main(String[] args) {
 
-        SpringApplication.run(KafkaSampleApplication.class, args);
+        SpringApplication.run(SpringKafkaSampleApplication.class, args);
     }
 }

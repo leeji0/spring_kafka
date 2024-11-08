@@ -1,4 +1,4 @@
-package spring.kafka;
+package jylee.kafka;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.springframework.beans.factory.annotation.Value;

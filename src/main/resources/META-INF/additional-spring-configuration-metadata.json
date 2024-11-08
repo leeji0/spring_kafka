@@ -1,8 +1,8 @@
 {
   "properties": [
     {
-      "name": "spring.kafka.template.me-jj-topic",
+      "name": "spring.kafka.template.me-jy-topic",
       "type": "java.lang.String",
-      "description": "Description for spring.kafka.template.me-jj-topic."
+      "description": "Description for spring.kafka.template.me-jy-topic."
   }
 ] }
